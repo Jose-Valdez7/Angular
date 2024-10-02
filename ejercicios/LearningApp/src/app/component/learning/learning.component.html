@@ -1,0 +1,27 @@
+<div>
+    <div>
+        <h2>CURSO</h2>
+        <div>
+            <ul>
+                <li> No. {{learning.course.id}} - {{learning.course.name}}</li>
+                <li> <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>CEDULA</th>
+                        <th>NOMBRE</th>
+                    </thead>
+                    <tbody>
+                        @for (students of learning.course.students; track $index) {
+                            <tr>
+                                <td>{{students.id}}</td>
+                                <td>{{students.identification}}</td>
+                                <td>{{students.name}} {{students.surname}}</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
