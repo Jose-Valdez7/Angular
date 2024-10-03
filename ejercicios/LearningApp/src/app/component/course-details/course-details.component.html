@@ -1,0 +1,13 @@
+<table class="table table-striped table-hover">
+    <thead >
+        <th scope="col">ID</th>
+        <th scope="col">CEDULA</th>
+        <th scope="col">NOMBRE</th>
+    </thead>
+    <tbody class="table-group-divider">
+        @for (student of students; track $index) {
+        <tr students-items [student]="student"   class="align-middle"></tr>
+    
+        }
+    </tbody>
+</table>
